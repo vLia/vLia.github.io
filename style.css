@@ -145,7 +145,6 @@ footer {
 #hero {
     background-color: transparent;
     min-height: 100vh;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,11 +208,12 @@ footer {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+    header {
+        display: none;  /* Hide the entire header on mobile */
+    }
+    
     #hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 120px 20px 40px 20px;  /* Add more padding at top for header */
-        min-height: auto;  /* Allow content to determine height */
+        padding-top: 20px;  /* Adjust top padding since there's no header */
     }
     
     .hero-content {
