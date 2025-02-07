@@ -14,22 +14,22 @@ body {
 
 /* Header */
 header {
-    background: rgba(44, 82, 130, 0.8);
+    background: linear-gradient(to bottom, rgba(44, 82, 130, 0.9), rgba(44, 82, 130, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;  /* Remove border to enhance fade effect */
     color: white;
-    padding: 0.8em; /* Increase from 0.5em */
+    padding: 0.8em;
     text-align: right;
     font-weight: 600;
     letter-spacing: 1px;
-    box-shadow: 0 4px 20px rgba(44, 82, 130, 0.2);
-    position: fixed;  /* Make header fixed */
-    width: 100%;     /* Full width */
-    top: 0;          /* Align to top */
-    z-index: 1000;   /* Keep above other content */
-    transition: transform 0.3s ease; /* Smooth transition for hide/show */
-    transform: translateY(-100%);  /* Start hidden by default */
+    box-shadow: none;  /* Remove shadow for better fade */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    transform: translateY(-100%);
 }
 
 /* Add a class for when we want to show the header */
@@ -52,17 +52,17 @@ header nav li {
 }
 
 header nav a {
-    color: white;
+    color: #1a365d;  /* Darker blue that matches your theme */
     text-decoration: none;
-    padding: 0.7em 1.2em; /* Increase padding */
+    padding: 0.7em 1.2em;
     border-radius: 8px;
     transition: all 0.3s ease;
-    font-weight: 500; /* Add some weight to the text */
+    font-weight: 600;  /* Increased from 500 to 600 for bolder text */
 }
 
 nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    background: rgba(26, 54, 93, 0.15);  /* Slightly transparent version of the same blue */
+    box-shadow: 0 4px 12px rgba(26, 54, 93, 0.1);
 }
 
 /* Sections */
@@ -146,7 +146,6 @@ footer {
     background-color: transparent;
     min-height: 100vh;
     width: 100%;
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
