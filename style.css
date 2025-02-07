@@ -212,19 +212,42 @@ footer {
     #hero {
         flex-direction: column;
         text-align: center;
+        padding: 120px 20px 40px 20px;  /* Add more padding at top for header */
+        min-height: auto;  /* Allow content to determine height */
     }
     
     .hero-content {
-        flex-wrap: wrap;  /* Allow wrapping on mobile */
+        flex-direction: column;  /* Stack items vertically */
         text-align: center;
+        gap: 30px;  /* Reduce gap on mobile */
     }
 
     .hero-content img {
-        width: 90%;  /* Keep the mobile width the same */
+        width: 80%;  /* Make image smaller on mobile */
+        max-width: 300px;  /* Limit maximum size */
+        margin: 0 auto;  /* Center the image */
     }
 
     .hero-text {
-        padding-right: 0;
+        padding: 0 15px;  /* Add some horizontal padding */
+    }
+
+    .hero-text h2 {
+        font-size: 24px;  /* Smaller font size for mobile */
+        line-height: 1.4;  /* Better line height for readability */
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 16px;  /* Adjust paragraph font size */
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        display: inline-block;
+        width: auto;  /* Allow button to size to content */
+        margin: 10px auto;  /* Center the button */
     }
 }
 
