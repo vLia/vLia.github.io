@@ -353,3 +353,38 @@ html {
     width: auto;  /* Override any width constraints */
     margin-top: 0;  /* Override any margin from .button class */
 }
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about-text li {
+    margin: 15px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.about-text li:before {
+    content: "•";
+    color: #4299e1;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.about-text strong {
+    color: #2c5282;
+}
+
+.about-text p {
+    margin: 20px 0;
+    line-height: 1.8;
+}

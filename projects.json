@@ -2,12 +2,12 @@
     {
         "name": "Portfolio Website",
         "description": "A simple personal portfolio hosted on GitHub Pages.",
-        "link": "https://yourusername.github.io/"
+        "link": "https://vlia.github.io/"
     },
     {
-        "name": "Weather App",
-        "description": "A web app that fetches real-time weather data.",
-        "link": "https://github.com/yourusername/weather-app"
+        "name": "Personal Blog",
+        "description": "A technical blog exploring cloud-native technologies, microservices architecture, and infrastructure automation with detailed tutorials and real-world examples.",
+        "link": "https://coding-with-lilla.blogspot.com/"
     }
 ]
 
