@@ -8,6 +8,11 @@
         "name": "Personal Blog",
         "description": "A technical blog exploring cloud-native technologies, microservices architecture, and infrastructure automation with detailed tutorials and real-world examples.",
         "link": "https://coding-with-lilla.blogspot.com/"
+    },
+    {
+        "name": "Stock Photography Portfolio",
+        "description": "A collection of stock photography images I've taken over the years.",
+        "link": "https://www.shutterstock.com/g/Laylistique"
     }
 ]
 
