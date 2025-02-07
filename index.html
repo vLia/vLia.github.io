@@ -3,25 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lilla Vass - Portfolio</title>
+    <title>Lilla - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="https://coding-with-lilla.blogspot.com/" target="_blank">Blog</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <img src="images/female-coder.png" alt="Female coder working on a laptop">
+            <div class="hero-text">
+                <h2>Empowering Developers with Cloud-Native Platform Tools</h2>
+                <p>I'm a software engineer specializing in <b>cloud-native technologies</b>, <b>microservices</b>, and <b>distributed systems</b> with <b>Go</b>. Passionate about building high-performance, reliable, and scalable platforms.</p>
+                <a href="#projects" class="button">View My Work</a>
+            </div>
+        </div>
+    </section>
+
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I'm a passionate developer skilled in frontend & backend technologies. I love building web apps and learning new technologies.</p>
+        <p>More details about my experience in **platform engineering, DevOps, and Go-based development**.</p>
     </section>
 
     <section id="projects">
@@ -33,14 +46,33 @@
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: yourname@example.com</p>
-        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/vLia" target="_blank">vLia</a>
+                </p>
+                <p>
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/lilla-vass-53337b86/" target="_blank">Lilla Vass</a>
+                </p>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="string" placeholder="Subject" id="subjectInput" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your message" id="messageInput" required></textarea>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="button">Send Message</button>
+                </div>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Lilla Vass. All rights reserved.</p>
+        <p>&copy; 2025 vLia. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
