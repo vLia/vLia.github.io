@@ -411,3 +411,16 @@ html {
     margin: 20px 0;
     line-height: 1.8;
 }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    padding: 0 1rem;
+}
