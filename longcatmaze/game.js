@@ -313,7 +313,7 @@ class MazeGame {
     
     draw() {
         // Clear canvas
-        this.ctx.fillStyle = '#f0f0f0';
+        this.ctx.fillStyle = '#ADD8E6';
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
         
         // Draw maze (scones/walls)
@@ -456,12 +456,25 @@ class MazeGame {
                     // Calculate rotation for corner based on turn direction
                     let rotation = this.getCornerRotation(prevDirection, segmentDirection);
                     
+                    // Check if the last body segment (next segment) is rotated
+                    const nextSegment = this.cat[index + 1];
+                    const nextDirection = nextSegment ? (nextSegment.direction || this.direction) : segmentDirection;
+                    const isLastBodyRotated = nextDirection !== 'up' && nextDirection !== null;
+                    
                     // Save context, rotate, draw, restore
                     this.ctx.save();
                     const centerX = segment.x * this.cellSize + this.cellSize / 2;
                     const centerY = segment.y * this.cellSize + this.cellSize / 2;
                     this.ctx.translate(centerX, centerY);
                     this.ctx.rotate(rotation);
+                    
+                    // Mirror horizontally if last body is rotated, otherwise mirror vertically
+                    if (isLastBodyRotated) {
+                        this.ctx.scale(-1, 1); // Horizontal mirror
+                    } else {
+                        this.ctx.scale(1, -1); // Vertical mirror
+                    }
+                    
                     this.ctx.drawImage(
                         this.cornerImage,
                         -this.cellSize / 2,
