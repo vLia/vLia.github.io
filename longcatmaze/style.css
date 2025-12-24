@@ -75,12 +75,33 @@ h1 {
     transform: scale(0.95);
 }
 
+.canvas-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.side-cat {
+    height: 500px;
+    width: auto;
+    object-fit: contain;
+}
+
+.left-cat {
+    transform: scaleX(-1); /* Mirror horizontally for left side */
+}
+
+.right-cat {
+    /* No transform needed for right side */
+}
+
 #gameCanvas {
     border: 3px solid #333;
     border-radius: 10px;
     background: #f0f0f0;
     display: block;
-    margin: 20px auto;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
