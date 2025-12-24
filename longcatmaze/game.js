@@ -522,6 +522,25 @@ class MazeGame {
                 }
             }
         });
+        
+        // Gray out the maze and show "You won!" if game is won
+        if (this.gameWon) {
+            // Draw semi-transparent gray overlay
+            this.ctx.fillStyle = 'rgba(128, 128, 128, 0.7)';
+            this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+            
+            // Draw "You won!" text
+            this.ctx.fillStyle = '#FFFFFF';
+            this.ctx.font = 'bold 48px Arial';
+            this.ctx.textAlign = 'center';
+            this.ctx.textBaseline = 'middle';
+            this.ctx.strokeStyle = '#000000';
+            this.ctx.lineWidth = 3;
+            const textX = this.canvas.width / 2;
+            const textY = this.canvas.height / 2;
+            this.ctx.strokeText('You won!', textX, textY);
+            this.ctx.fillText('You won!', textX, textY);
+        }
     }
 
     getCornerRotation(fromDir, toDir) {
