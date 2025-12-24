@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Cat Maze</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Long Cat Maze</h1>
+        <div class="game-info">
+            <p>Use arrow keys to move the cat. The cat grows longer with each move!</p>
+            <p>Goal: Reach the exit (green square) from the start (blue square)</p>
+        </div>
+        <div class="controls">
+            <button id="upBtn" class="arrow-btn">↑</button>
+            <div class="middle-row">
+                <button id="leftBtn" class="arrow-btn">←</button>
+                <button id="downBtn" class="arrow-btn">↓</button>
+                <button id="rightBtn" class="arrow-btn">→</button>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div class="status">
+            <p id="statusText">Press an arrow to start!</p>
+        </div>
+        <button id="newGameBtn" class="new-game-btn">New Game</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
