@@ -570,25 +570,24 @@ class MazeGame {
         // Down to Right: 0° (base)
         // Left to Down: 90°
         // Up to Right: 180°
-        if (fromDir === 'down' && toDir === 'right') {
-            baseRotation = 0;
-        } else if (fromDir === 'left' && toDir === 'down') {
-            baseRotation = Math.PI / 2; // 90°
-        } else if (fromDir === 'up' && toDir === 'right') {
-            baseRotation = Math.PI; // 180°
-        } else if (fromDir === 'right' && toDir === 'up') {
-            baseRotation = -Math.PI / 2; // -90° or 270°
-        } else if (fromDir === 'right' && toDir === 'down') {
-            baseRotation = Math.PI; // 180°
-        } else if (fromDir === 'down' && toDir === 'left') {
-            baseRotation = -Math.PI / 2; // -90°
-        } else if (fromDir === 'left' && toDir === 'up') {
-            baseRotation = 0;
-        } else if (fromDir === 'up' && toDir === 'left') {
-            baseRotation = Math.PI / 2; // 90°
+        if (fromDir === 'down') {
+            if (toDir === 'right') { baseRotation = 0; return baseRotation; }
+            if (toDir === 'left') { baseRotation = -Math.PI/2; return baseRotation; }
+        }
+        if(fromDir === 'left') { 
+            if (toDir === 'down') { baseRotation = Math.PI / 2; return baseRotation; }
+            if (toDir === 'up') { baseRotation = Math.PI; return baseRotation; }
+        }
+        if(fromDir === 'up') { 
+            if (toDir === 'right') { baseRotation = Math.PI / 2; return baseRotation; }
+            if (toDir === 'left') { baseRotation = -Math.PI; return baseRotation; }
+        }
+        if(fromDir === 'right') { 
+            if (toDir === 'down') { baseRotation = Math.PI; return baseRotation; }
+            if (toDir === 'up') { baseRotation = Math.PI/2; return baseRotation; }
         } else {
             // Default: calculate based on turn angle
-            baseRotation = turnAngle;
+            baseRotation = 0;//turnAngle;
         }
         
         return baseRotation;
