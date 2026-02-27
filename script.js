@@ -70,32 +70,27 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollToSection(nextIndex);
     });
 
-    // Add header hide/show functionality
-    const header = document.querySelector('header');
-    let lastScroll = 0;
-    
-    // Hide header initially
-    header.style.transform = 'translateY(-100%)';
-    
-    // Add a small delay before allowing the header to show
-    setTimeout(() => {
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            // Show header when scrolling up or at the top
-            if (currentScroll <= 0) {
-                header.style.transform = 'translateY(0)';
-            } else if (currentScroll > lastScroll) {
-                // Scrolling down - hide header
-                header.style.transform = 'translateY(-100%)';
-            } else {
-                // Scrolling up - show header
-                header.style.transform = 'translateY(0)';
-            }
-            
-            lastScroll = currentScroll;
-        });
-    }, 500); // Half second delay
+    // Scroll reveal for sections
+    sections.forEach(section => {
+        section.classList.add('reveal');
+    });
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                } else {
+                    entry.target.classList.remove('in-view');
+                }
+            });
+        },
+        {
+            threshold: 0.2,
+        }
+    );
+
+    sections.forEach(section => observer.observe(section));
 
     // Add form submission handler
     document.getElementById('contactForm').addEventListener('submit', function(e) {
