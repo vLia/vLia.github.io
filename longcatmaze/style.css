@@ -5,34 +5,43 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #E0E0E0 0%, #D3D3D3 50%, #C6C6C6 100%);
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: radial-gradient(circle at top left, #0b1120 0%, #0b1120 35%, #1e293b 70%, #020617 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    color: #e5f2ff;
 }
 
 .container {
-    background: white;
-    border-radius: 20px;
+    background: #ffffff;
+    border-radius: 24px;
     padding: 30px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 24px 80px rgba(15, 23, 42, 0.9);
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
+    width: 100%;
+    border: 1px solid rgba(148, 163, 184, 0.35);
 }
 
 h1 {
-    color: #333;
     margin-bottom: 20px;
-    font-size: 2.5em;
+    font-size: 2.25em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: linear-gradient(120deg, #22d3ee, #fb923c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 18px 18px rgba(62, 74, 101, 0.9);
 }
 
 .game-info {
     margin-bottom: 20px;
-    color: #666;
-    font-size: 0.9em;
+    color: #3e4147;
+    font-size: 0.95em;
 }
 
 .game-info p {
@@ -56,19 +65,20 @@ h1 {
     width: 60px;
     height: 60px;
     font-size: 24px;
-    border: 2px solid #667eea;
-    background: white;
-    color: #667eea;
-    border-radius: 10px;
+    border: none;
+    background: radial-gradient(circle at top left, #22d3ee, #1e3a8a);
+    color: #020617;
+    border-radius: 14px;
     cursor: pointer;
-    transition: all 0.2s;
-    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.8);
 }
 
 .arrow-btn:hover {
-    background: #667eea;
-    color: white;
-    transform: scale(1.1);
+    background: radial-gradient(circle at top left, #fb923c, #b45309);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.95);
 }
 
 .arrow-btn:active {
@@ -80,11 +90,26 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin: 20px 0;
+    margin: 24px 0;
+    position: relative;
+}
+
+.canvas-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: -18px;
+    border-radius: 32px;
+    background:
+        radial-gradient(circle at 20% 0%, rgba(251, 146, 60, 0.35), transparent 60%),
+        radial-gradient(circle at 80% 100%, rgba(248, 113, 113, 0.35), transparent 60%);
+    opacity: 0.9;
+    filter: blur(8px);
+    z-index: -1;
+    animation: flamePulse 3s ease-in-out infinite;
 }
 
 .side-cat {
-    height: 500px;
+    height: 420px;
     width: auto;
     object-fit: contain;
 }
@@ -98,36 +123,61 @@ h1 {
 }
 
 #gameCanvas {
-    border: 3px solid #333;
-    border-radius: 10px;
-    background: #f0f0f0;
+    border-radius: 14px;
+    background: #ffffff;
     display: block;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #000000;
+    /* box-shadow:
+        0 0 30px rgba(251, 146, 60, 0.5),
+        0 16px 40px rgba(16, 17, 20, 0.95); */
 }
 
 .status {
-    margin: 20px 0;
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #333;
+    margin: 16px 0 24px;
+    font-size: 1.05em;
+    font-weight: 600;
+    color: #a96313;
+    text-shadow: 0 0 14px rgba(251, 146, 60, 0.7);
+}
+
+.status #statusText {
+    letter-spacing: 0.04em;
+}
+
+/* Flame animation */
+@keyframes flamePulse {
+    0% {
+        transform: scale(0.98) translateY(2px);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.02) translateY(-2px);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.98) translateY(2px);
+        opacity: 0.7;
+    }
 }
 
 .new-game-btn {
     padding: 12px 30px;
     font-size: 1em;
-    background: #667eea;
-    color: white;
+    background: radial-gradient(circle at top left, #22d3ee, #1e3a8a);
+    color: #020617;
     border: none;
-    border-radius: 25px;
+    border-radius: 999px;
     cursor: pointer;
-    transition: all 0.3s;
-    font-weight: bold;
+    transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 .new-game-btn:hover {
-    background: #764ba2;
+    background: radial-gradient(circle at top left, #fb923c, #b45309);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.9);
 }
 
 .new-game-btn:active {
