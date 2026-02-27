@@ -6,7 +6,7 @@ body {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    background: radial-gradient(circle at top left, #020617 0%, #020617 30%, #0f172a 65%, #020617 100%);
+    background: radial-gradient(circle at top left, #0b1120 0%, #0b1120 35%, #1e293b 70%, #020617 100%);
     background-attachment: fixed;
     color: #e5f2ff;
     line-height: 1.6;
@@ -31,7 +31,7 @@ header::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgba(56, 189, 248, 0.18), rgba(248, 113, 113, 0.16));
+    background: linear-gradient(90deg, rgba(56, 189, 248, 0.18), rgba(248, 171, 120, 0.18));
     pointer-events: none;
     z-index: -1;
     border-bottom: 1px solid rgba(148, 163, 184, 0.35);
@@ -69,7 +69,7 @@ header nav a::after {
     right: 12px;
     bottom: 8px;
     height: 2px;
-    background: linear-gradient(90deg, #22d3ee, #f97316);
+    background: linear-gradient(90deg, #22d3ee, #fb923c);
     box-shadow: 0 0 12px rgba(56, 189, 248, 0.7);
     transform-origin: center;
     transform: scaleX(0);
@@ -125,7 +125,7 @@ section {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 14px;
-    background: linear-gradient(135deg, #22d3ee, #6366f1);
+    background: linear-gradient(135deg, #22d3ee, #1e3a8a);
     color: #0b1220;
     text-decoration: none;
     border-radius: 8px;
@@ -134,7 +134,7 @@ section {
 }
 
 .project a:hover {
-    background: linear-gradient(135deg, #f97316, #ec4899);
+    background: linear-gradient(135deg, #fb923c, #b45309);
 }
 
 /* Contact Section */
@@ -229,7 +229,7 @@ footer {
 
 .hero-text h2 {
     font-size: 30px;
-    background: linear-gradient(120deg, #22d3ee, #f97316, #ec4899);
+    background: linear-gradient(120deg, #22d3ee, #fb923c);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -244,7 +244,7 @@ footer {
 
 .button {
     display: inline-block;
-    background: radial-gradient(circle at top left, #22d3ee, #6366f1);
+    background: radial-gradient(circle at top left, #22d3ee, #1e3a8a);
     color: #020617;
     padding: 12px 20px;
     border-radius: 8px;
@@ -255,7 +255,7 @@ footer {
 }
 
 .button:hover {
-    background: radial-gradient(circle at top left, #f97316, #ec4899);
+    background: radial-gradient(circle at top left, #fb923c, #b45309);
     box-shadow: 0 14px 40px rgba(15, 23, 42, 0.9);
     transform: translateY(-2px);
 }
@@ -508,7 +508,7 @@ section h2::after {
     right: 0;
     bottom: -10px;
     height: 3px;
-    background: linear-gradient(90deg, #22d3ee, #f97316, #ec4899);
+    background: linear-gradient(90deg, #22d3ee, #fb923c);
     box-shadow: 0 0 14px rgba(56, 189, 248, 0.8);
 }
     padding: 0 1rem;
